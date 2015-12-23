@@ -7,6 +7,11 @@
 # you're doing.
 
 Vagrant.configure(2) do |config|
+  config.vm.provider "virtualbox" do |vb|
+    # vb.gui = true
+    vb.memory = "1024"
+  end
+
   config.vm.box = "ubuntu/trusty64"
   config.vm.synced_folder "C://Users//SvenMeikel//vagrant-share", "/home/vagrant/smaprojects"
   config.vm.network :forwarded_port, guest: 3000, host: 3000
