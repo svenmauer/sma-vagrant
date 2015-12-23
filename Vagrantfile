@@ -25,6 +25,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y build-essential
     sudo apt-get install -y mongodb-org
     sudo apt-get install -y git
+    sudo apt-get install -y ruby-full
     rm -rf /home/vagrant/.vim
     git clone https://github.com/svenmauer/dotvim.git /home/vagrant/.vim
     git clone https://github.com/gmarik/vundle.git /home/vagrant/.vim/bundle/vundle
