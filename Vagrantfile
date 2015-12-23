@@ -25,5 +25,6 @@ Vagrant.configure(2) do |config|
     git clone https://github.com/gmarik/vundle.git /home/vagrant/.vim/bundle/vundle
     rm -rf /home/vagrant/.vimrc
     cp /home/vagrant/.vim/.vimrc /home/vagrant/
+    sudo chown -R vagrant:vagrant /home/vagrant/.vim
   SHELL
 end
