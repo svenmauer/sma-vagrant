@@ -9,7 +9,7 @@
 Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     # vb.gui = true
-    vb.memory = "1024"
+    vb.memory = "2024"
   end
 
   config.vm.box = "ubuntu/trusty64"
@@ -31,5 +31,8 @@ Vagrant.configure(2) do |config|
     rm -rf /home/vagrant/.vimrc
     cp /home/vagrant/.vim/.vimrc /home/vagrant/
     sudo chown -R vagrant:vagrant /home/vagrant/.vim
+    cp /home/vagrant/smaprojects/id_rsa /home/vagrant/.ssh
+    sudo chown -R vagrant:vagrant .ssh
+    chmod 600 /home/vagrant/.ssh/id_rsa
   SHELL
 end
