@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.synced_folder "C://Users//SvenMeikel//vagrant-share", "/home/vagrant/smaprojects"
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 9000, host: 9000
   config.vm.provision "shell", inline: <<-SHELL
   sudo apt-key adv --y --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
     echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list    
