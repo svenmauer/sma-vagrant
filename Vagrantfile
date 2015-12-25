@@ -9,7 +9,7 @@
 Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     # vb.gui = true
-    vb.memory = "2024"
+    vb.memory = "1724"
   end
 
   config.vm.box = "ubuntu/trusty64"
@@ -27,6 +27,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y mongodb-org
     sudo apt-get install -y git
     sudo apt-get install -y ruby-full
+    sudo apt-get install -y ruby-sass
     sudo apt-get install -y build-essential cmake
     sudo apt-get install -y python-dev
     rm -rf /home/vagrant/.vim
